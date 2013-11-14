@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>br.com.rlc</groupId>
+    <artifactId>redeLivreComercio</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>br.com.rlc</groupId>
+  <artifactId>rlc-database</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>rlc-database</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+		<!-- WPATTERN NORTHWIND UTILS -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>rlc-utils</artifactId>
+		</dependency>
+		<!-- SQL SERVER DRIVER -->
+			<dependency>
+				<groupId>net.sourceforge.jtds</groupId>
+				<artifactId>jtds</artifactId>
+				<version>1.2.4</version>
+			</dependency>
+
+			<!-- MySQL DRIVER -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.18</version>
+			</dependency>
+			
+			<!-- SLF4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+			</dependency>
+			
+			<!-- HIBERNATE CORE -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+			</dependency>
+
+			<!-- HIBERNATE ENTITYMANAGER -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+			</dependency>
+			
+			<!-- SPRING DATA JPA -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.dozer</groupId>
+				<artifactId>dozer</artifactId>
+			</dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>
